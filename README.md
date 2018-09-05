@@ -1,4 +1,4 @@
 # mish-khan.github.io
-personal site link: mish-khan.github.io/README.md
+personal site link: https://mish-khan.github.io
     
 .
