@@ -1,0 +1,96 @@
+h2,h3 {
+	color: purple;
+    text-shadow: 1px 1px #000000;
+    text-decoration: underline;
+ 	text-decoration-style: dashed;
+ 	text-decoration-color: black;
+    -webkit-animation: mymove 5s; 
+    animation: mymove 5s;
+    font-size:2vw;
+    font-family: serif;
+}
+
+h1 {
+	color: purple;
+    text-shadow: 1px 1px #000000;
+    -webkit-animation: mymove 5s; 
+    animation: mymove 5s;
+    font-family: serif;
+    font-size:3vw;
+}
+
+h4 {
+	color: white;
+    -webkit-animation: mymove 5s; 
+    animation: mymove 5s;
+    font-family: serif;
+    font-size:2vw;
+}
+
+p,li {
+	color: navy;
+	font-family: cursive;
+	font-size:1vw;
+}
+
+
+
+@-webkit-keyframes mymove {
+    50% {text-shadow: 10px 20px 30px purple;}
+}
+
+@keyframes mymove {
+    50% {text-shadow: 10px 20px 30px purple;}
+}
+
+.jumbotron {
+  background-image: url('http://t.wallpaperweb.org/wallpaper/abstract/1680x1050/custom.jpg');
+  background-size: cover;
+  color: white;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: navy;
+  text-align: center;
+  height: 2vx;
+  font-size: 2vx;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+img {
+    padding: 2px; 
+    width: 7%;
+    size: 2px;
+}
+
+img:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.image {
+  display: block;
+  position: relative;
+  width: 30%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
