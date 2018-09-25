@@ -11,7 +11,7 @@ h2,h3 {
 }
 
 h1 {
-	color: purple;
+	  color: purple;
     text-shadow: 1px 1px #000000;
     -webkit-animation: mymove 5s; 
     animation: mymove 5s;
@@ -27,13 +27,24 @@ h4 {
     font-size:2vw;
 }
 
-p,li {
-	color: navy;
+p, li{
+  color: navy;
+  font-family: cursive;
+  font-size:1.1vw;
+}
+
+form,select,textarea,h6 {
+	color: pink;
 	font-family: cursive;
+  background-image: url('http://t.wallpaperweb.org/wallpaper/abstract/1680x1050/custom.jpg');
 	font-size:1vw;
 }
 
 
+h7{
+  color:pink;
+  font-size: 1.25vw;
+}
 
 @-webkit-keyframes mymove {
     50% {text-shadow: 10px 20px 30px purple;}
@@ -46,9 +57,8 @@ p,li {
 .jumbotron {
   background-image: url('http://t.wallpaperweb.org/wallpaper/abstract/1680x1050/custom.jpg');
   background-size: cover;
+  background-color: transparent;
   color: white;
-  text-decoration: underline;
-  text-decoration-style: dashed;
   text-decoration-color: navy;
   text-align: center;
   height: 2vx;
@@ -94,3 +104,45 @@ img:hover {
 .container:hover .overlay {
   opacity: 1;
 }
+
+.card {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 2, 0.2);
+    max-width: 25%;
+    margin: auto;
+    text-align: center;
+    text-decoration-color: navy;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 1vx;
+    color: pink;
+    background-color:purple;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.25vx;
+}
+
+a,audio {
+    text-decoration: none;
+    font-size: 2vx;
+    color: black;
+}
+
+input, option{
+  color:pink;
+  background-color: transparent;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+

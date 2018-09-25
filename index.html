@@ -5,13 +5,55 @@
 	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   		<link rel="stylesheet" type="text/css" href="main.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script>
+
+  			function validateForm() 
+  			{
+    			var x = document.forms["myForm"]["fname"].value;
+    			if (x == "") 
+    			{
+        			alert("Name must be filled out");
+        			return false;
+   				}
+   				if(!isNaN(x))
+				{
+					alert("Please enter only characters" );
+        			return false;
+				}
+   				if ((x.length < 6) || (x.length > 15))
+				{
+					alert("Your Name must be 6 to 15 Character");
+					return false;
+				}
+			}
+
+			function startTime() {
+    			var today = new Date();
+    			var h = today.getHours();
+    			var m = today.getMinutes();
+    			var s = today.getSeconds();
+    			m = checkTime(m);
+    			s = checkTime(s);
+    			document.getElementById('txt').innerHTML =
+    			h + ":" + m + ":" + s;
+    			var t = setTimeout(startTime, 500);
+			}
+		
+			function checkTime(i) {
+    			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    			return i;
+			}
+		</script>
 	</head>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<header class="container">
   		<div class="row">
     		<h1 class="col-sm-4"><i>Rimsha Amer<i></h1>
     		<nav class="col-sm-8 text-right">
-  				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhfq0HXatRo_Ye_blk24kxYr4VjfMKGQSyWicoqblFzcq_W6d5" >
+  				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhfq0HXatRo_Ye_blk24kxYr4VjfMKGQSyWicoqblFzcq_W6d5" id='facebook'>
   				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiSHipxWiWuwR-sSEFaJeR0dCnx-5mhd9D7P6V-sFydU7-6GDH" >
   				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyttDFTA07q5YqXvi0r0Hod1UVodmfGSwilLFa27v7U_g-Emk" >
   				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ogbbmKSPnhjYyHQ4IxFsQLD19DU0xyo4IhZfK6OJtZojMwPN4w" >
@@ -24,7 +66,7 @@
 			<h1><em>Resume</em> </h1>
 		</div>
 
-	<body>
+	<body onload="startTime()">
 		<div class="container">
 			<div class="row">
 				<div class= "col-sm-6">
@@ -125,11 +167,39 @@
 
 			<div class="jumbotron" width="20%; height=20%;">
  				<h4>@WebAssignment</h4>
- 					<audio controls>
-  						<source src="http://www.pacdv.com/sounds/voices/thats-pretty-much-it.wav" type="audio/ogg">
-  						<source src="http://www.pacdv.com/sounds/voices/thats-pretty-much-it.wav" type="audio/mpeg">
-					</audio>
+					<br>
+				<div id="txt" class="h3"</div>
 			</div>	
-		</div>	
+
+			<div class="card">
+				<h6>
+					<p><button>Contact Card</button></p>
+  						<fieldset>
+							<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+							<h7>Name:<h7> 
+								<input type="text" name="fname">
+  								<br><br>
+  								<h7>Country:</h7> 
+  								<br><br> 
+  								<select name="Country">
+  									<option value="Pakistan">Pakistan</option>
+  									<option value="USA">USA</option>
+  									<option value="UK">UK</option>
+  									<option value="Paris">Paris</option>
+								</select>
+								<br><br>
+								<textarea rows="4" cols="25" id="subject">
+								</textarea>
+								<br><br>
+								<input type="submit" value="Submit">
+							<h6>
+						</div>
+					</fieldset>
+				</form>
+				<br>
+		<audio controls>
+  				<source src="http://www.pacdv.com/sounds/voices/thats-pretty-much-it.wav" type="audio/ogg">
+  				<source src="http://www.pacdv.com/sounds/voices/thats-pretty-much-it.wav" type="audio/mpeg">
+		</audio>	
 	</body>
 </html>
